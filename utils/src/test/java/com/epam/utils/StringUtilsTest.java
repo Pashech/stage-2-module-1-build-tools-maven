@@ -8,8 +8,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringUtilsTest {
 
     @Test
-    void isPositiveNumber() {
+    void isPositiveNumberWithPositive() {
         Assertions.assertTrue(StringUtils.isPositiveNumber("1"));
+    }
+
+    @Test
+    void isPositiveNumberWithNegative() {
         Assertions.assertFalse(StringUtils.isPositiveNumber("-1"));
     }
 }

@@ -11,9 +11,13 @@ class UtilsTest {
 
 
     @Test
-    void isAllPositiveNumbers() {
+    void isAllPositiveNumbersWithTrue() {
         List<String> trueList = Arrays.asList("1", "2", "4");
         Assertions.assertTrue(Utils.isAllPositiveNumbers(trueList));
+    }
+
+    @Test
+    void isAllPositiveNumbersWithFalse() {
         List<String> falseList = Arrays.asList("1", "2", "-4");
         Assertions.assertFalse(Utils.isAllPositiveNumbers(falseList));
     }
