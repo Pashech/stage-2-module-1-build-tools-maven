@@ -17,6 +17,8 @@ public class Utils {
                 return false;
             } else if (s.equals("")) {
                 return false;
+            } else if (s.equals("null")) {
+                return false;
             }
             if(StringUtils.isPositiveNumber(s)){
                 temp.add(s);
