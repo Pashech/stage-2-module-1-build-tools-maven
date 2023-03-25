@@ -14,15 +14,12 @@ public class StringUtils {
         char[] ch;
         ch = str.toCharArray();
         String s = org.apache.commons.lang3.StringUtils.valueOf(ch);
-        int number = Integer.parseInt(s);
+        double number = Double.parseDouble(s);
         System.out.println(number);
-        if(number > 0){
-            return true;
-        }
-        return false;
+        return number > 0;
     }
 
     public static void main(String[] args) {
-        System.out.println(StringUtils.isPositiveNumber(null));
+        System.out.println(StringUtils.isPositiveNumber("-11.22"));
     }
 }
