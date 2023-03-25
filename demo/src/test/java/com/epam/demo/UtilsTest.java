@@ -21,4 +21,22 @@ class UtilsTest {
         List<String> falseList = Arrays.asList("1", "2", "-4");
         Assertions.assertFalse(Utils.isAllPositiveNumbers(falseList));
     }
+
+    @Test
+    void isAllPositiveNumbersWithEmptyString() {
+        List<String> falseList = Arrays.asList("1", "2", " ");
+        Assertions.assertFalse(Utils.isAllPositiveNumbers(falseList));
+    }
+
+    @Test
+    void isAllPositiveNumbersWithEmptyString2() {
+        List<String> falseList = Arrays.asList("1", "2", "");
+        Assertions.assertFalse(Utils.isAllPositiveNumbers(falseList));
+    }
+
+    @Test
+    void isAllPositiveNumbersWithNull() {
+        List<String> falseList = null;
+        Assertions.assertFalse(Utils.isAllPositiveNumbers(null));
+    }
 }

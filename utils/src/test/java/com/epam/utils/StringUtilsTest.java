@@ -16,4 +16,14 @@ class StringUtilsTest {
     void isPositiveNumberWithNegative() {
         Assertions.assertFalse(StringUtils.isPositiveNumber("-1"));
     }
+
+    @Test
+    void isPositiveNumberWithNull() {
+        Assertions.assertFalse(StringUtils.isPositiveNumber(null));
+    }
+
+    @Test
+    void isPositiveNumberWithEmptyString() {
+        Assertions.assertFalse(StringUtils.isPositiveNumber(" "));
+    }
 }
